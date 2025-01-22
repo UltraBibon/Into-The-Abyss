@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/KumaBeer/Stylized cave/Scenes/Sand cave demo.unity
+    guid: ccc994b9b4b193a40ad42160724e4096
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fa585db746b512443bc6070d3d90f874, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9ee541c5d12fe33439dc71e76563d2ce, type: 2}
