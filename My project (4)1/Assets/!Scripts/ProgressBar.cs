@@ -10,12 +10,6 @@ public class ProgressBar : MonoBehaviour
 
     public Image mask;
 
-
-    private void Update()
-    {
-        
-    }
-
     void GetCurrentFill()
     {
         float fillamount = cur / max;

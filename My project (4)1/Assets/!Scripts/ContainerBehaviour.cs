@@ -3,18 +3,25 @@ using UnityEngine;
 public class ContainerBehaviour : MonoBehaviour
 {
 
+    //management
     [SerializeField] GameObject container;
     [SerializeField] GameObject player;
     [SerializeField] private PlayerManage playerManage;
     [SerializeField] public bool shark = false;
     [SerializeField] public GameObject _shark;
+
+    //floats
     [SerializeField] public bool oxygen_add;
     [SerializeField] public bool armor_add;
     [SerializeField] public float howmany_armor;
     [SerializeField] public float howmany_oxygen;
+
+    //sound
     [SerializeField] AudioSource adding_sound;
 
+
     private SharkBehaviour _sharkBehaviour;
+
 
     private void Start()
     {
@@ -25,8 +32,6 @@ public class ContainerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-
 
         if (other.CompareTag("Player"))
         {

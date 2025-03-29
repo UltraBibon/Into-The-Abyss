@@ -37,8 +37,6 @@ public class SharkBehaviour : MonoBehaviour
         }
 
 
-
-
         if (shark_hp < 0)
         {
             pointLight.color = Color.white;

@@ -10,38 +10,43 @@ using UnityEngine.UI;
 
 public class PlayerControllerManager : MonoBehaviour
 {
+
+    //floats - movement
     [SerializeField] public float up_speed;
     [SerializeField] public float m_speed;
     [SerializeField] public float r_speed;
+
+    //movement
+    Controller inputActions;
+    Vector2 move;
+    Vector2 rotate;
+
+    //objects
     [SerializeField] public Rigidbody rb;
     [SerializeField] public GameObject lights;
     [SerializeField] public GameObject Menu;
     [SerializeField] public GameObject shockerManager;
     [SerializeField] public GameObject start;
+
+
     [SerializeField] public float reload_cnt;
     [SerializeField] public Image mask;
 
+    //audio
     [SerializeField] public AudioSource alightson;
     [SerializeField] public AudioSource alightsof;
-
     [SerializeField] public AudioSource music;
 
+    //helpers
     public bool can = false;
     private float c;
-
-    Controller inputActions;
-    Vector2 move;
-    Vector2 rotate;
 
     private bool islightson = false;
     public  bool isopened = false;
 
-    private bool isup = false;
-    private bool isdown = false;
-
     private ShockAttack shockAttack;
 
-    
+  
 
     private void Awake()
     {
@@ -59,6 +64,8 @@ public class PlayerControllerManager : MonoBehaviour
 
         inputActions.PlayerController.Shock.performed += ctx => shockAttack.Shock(can);
 
+
+        //потом переписать
         /*
         inputActions.PlayerController.Up.performed += ctx => Submarine_Up();
         inputActions.PlayerController.Up.canceled += ctx => Submarine_Down();
@@ -111,6 +118,7 @@ public class PlayerControllerManager : MonoBehaviour
 
     }
 
+
     private void Open_Menu()
     {
         if (isopened)
@@ -130,7 +138,6 @@ public class PlayerControllerManager : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(start);
         }
     }
-
 
 
     #region SubmarineFunctions
